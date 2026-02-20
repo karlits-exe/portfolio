@@ -191,6 +191,14 @@ h5.card-title {
 #tools {
   background-color: var(--bg);
 }
+h3.text-center {
+  color: var(--text);
+}
+
+#tools img {
+  max-height: 90px;
+  object-fit: contain;
+}
 
 /* Contact */
 #contact {
