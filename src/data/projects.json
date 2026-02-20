@@ -11,7 +11,7 @@
     "title": "Course Booking API Documentation",
     "image": "/images/website-placeholder.jpg",
     "description": "RESTful API for managing course enrollments, featuring user registration, authentication, and retrieval of user details. Supports course creation, updates, archiving, activation, and student enrollment. Publicly documented using Postman.",
-    "link": ""
+    "link": "https://documenter.getpostman.com/view/51751573/2sBXcEjLDJ"
   },
   {
     "id": 3,
