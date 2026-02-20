@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-dark: hsl(228 79% 2%);
+  --bg: hsl(222 55% 5%);
+  --bg-light: hsl(220 35% 10%);
+  --text: hsl(220 100% 98%);
+  --text-muted: hsl(220 35% 73%);
+  --highlight: hsl(220 20% 42%);
+  --border: hsl(220 26% 31%);
+  --border-muted: hsl(220 37% 20%);
+  --primary: hsl(220 78% 76%);
+  --secondary: hsl(40 53% 60%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+  /* oklch */
+  --bg-dark: oklch(0.1 0.025 264);
+  --bg: oklch(0.15 0.025 264);
+  --bg-light: oklch(0.2 0.025 264);
+  --text: oklch(0.96 0.05 264);
+  --text-muted: oklch(0.76 0.05 264);
+  --highlight: oklch(0.5 0.05 264);
+  --border: oklch(0.4 0.05 264);
+  --border-muted: oklch(0.3 0.05 264);
+  --primary: oklch(0.76 0.1 264);
+  --secondary: oklch(0.76 0.1 84);
+  --danger: oklch(0.7 0.05 30);
+  --warning: oklch(0.7 0.05 100);
+  --success: oklch(0.7 0.05 160);
+  --info: oklch(0.7 0.05 260);
+  /* shadows */
+  --shadow-s: inset 0 1px 2px #ffffff30, /* top highlight */ 0 1px 2px #00000030,
+    /* dark shadow */ 0 2px 4px #00000015; /* soft shadow */
+  --shadow-m: inset 0 1px 2px #ffffff50, /* top highlight */ 0 2px 4px #00000030,
+    /* dark shadow */ 0 4px 8px #00000015; /* soft shadow */
+  --shadow-l: inset 0 1px 2px #ffffff70, /* top highlight */ 0 4px 6px #00000030,
+    /* dark shadow */ 0 6px 10px #00000015; /* soft shadow */
+}
+body.light {
+  --bg-dark: hsl(220 59% 91%);
+  --bg: hsl(220 100% 97%);
+  --bg-light: hsl(220 100% 100%);
+  --text: hsl(226 85% 7%);
+  --text-muted: hsl(220 26% 31%);
+  --highlight: hsl(220 100% 100%);
+  --border: hsl(220 19% 53%);
+  --border-muted: hsl(220 27% 65%);
+  --primary: hsl(221 49% 33%);
+  --secondary: hsl(44 100% 14%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+  /* oklch */
+  --bg-dark: oklch(0.92 0.025 264);
+  --bg: oklch(0.96 0.025 264);
+  --bg-light: oklch(1 0.025 264);
+  --text: oklch(0.15 0.05 264);
+  --text-muted: oklch(0.4 0.05 264);
+  --highlight: oklch(1 0.05 264);
+  --border: oklch(0.6 0.05 264);
+  --border-muted: oklch(0.7 0.05 264);
+  --primary: oklch(0.4 0.1 264);
+  --secondary: oklch(0.4 0.1 84);
+  --danger: oklch(0.5 0.05 30);
+  --warning: oklch(0.5 0.05 100);
+  --success: oklch(0.5 0.05 160);
+  --info: oklch(0.5 0.05 260);
+}
+
+body {
+  background-color: var(--bg-dark) !important;
+}
+
+/* Navbar */
+nav.navbar {
+  background-color: var(--bg-dark) !important;
+}
+
+a.navbar-brand,
+a.nav-link,
+button.navbar-toggler {
+  color: var(--text) !important;
+}
+
+a.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+a.nav-link::after {
+  color: var(--primary) !important;
+}
+
+/* End of Navbar */
+
+/* Landing */
+
+#landing {
+  background-color: var(--bg);
+}
+
+.hero-right h1,
+.hero-right h2 {
+  color: var(--text);
+  font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+}
+
+.hero-right a {
+  background-color: transparent;
+  color: var(--text);
+  box-shadow: var(--shadow-s);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-right a#call-to-action {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--primary);
+  box-shadow: var(--shadow-s);
+}
+
+.hero-right a:hover,
+.hero-right a#call-to-action:hover {
+  background-color: var(--bg-light);
+}
+
+.hero-right p {
+  color: var(--text);
+  max-width: 600px;
+}
+
+.hero-right h1 > span {
+  color: var(--primary);
+}
+
+div#hero-container {
+  height: 90vh !important;
+}
+
+/* Landing End */
+
+/* Projects */
+h1.text-center {
+  color: var(--text);
+}
+
+h5.card-title {
+  color: var(--text);
+}
+
+.card-body #project-link {
+  background-color: transparent !important;
+  border: var(--primary);
+}
+
+.card {
+  background-color: var(--bg) !important;
+  box-shadow: var(--shadow-m);
+  border: 1px solid var(--border-muted) !important;
+  width: 18rem !important;
+}
+
+.card:hover {
+  background-color: var(--bg-light) !important;
+  box-shadow: var(--shadow-l);
+  border: 1px solid var(--border);
+}
+
+#project-link {
+  background-color: transparent !important;
+  border: 1px solid var(--primary) !important;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+}
+/* Projects End */
+
+/* Tools */
+#tools {
+  background-color: var(--bg);
+}
+
+/* Contact */
+#contact {
+  height: 80vh;
+}
+
+#form-border {
+  box-shadow: var(--shadow-l);
+  background-color: var(--bg);
+}
+
+div input,
+div textarea {
+  background-color: var(--bg-light) !important;
+  color: var(--text) !important;
+}
+
+div label {
+  color: var(--text) !important;
+}
+
+input,
+textarea {
+  border: 1px solid var(--border-muted) !important;
+  box-shadow: var(--shadow-l);
+}
+
+input::placeholder {
+  color: var(--text-muted) !important;
+}
+
+#submit-button {
+  background-color: transparent !important;
+  color: var(--text);
+  border: 1px solid var(--primary);
+}
+
+@media (min-width: 768px) {
+  div#contact > div.container > div.row > div.col-12 {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  div#contact > div.container > div.row > div.col-12 {
+    max-width: 30%;
+  }
+}
+/* Contact End */
+
+/* Footer */
+
+#footer {
+  background-color: var(--bg);
+}
+
+div.container p {
+  color: var(--text) !important;
+}
+/* Footer End */
+/*  */
