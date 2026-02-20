@@ -1,6 +1,6 @@
 
 <template>
-	<div class="row flex-column bg-white jumbotron" id="tools">
+	<div class="row flex-column jumbotron" id="tools">
         <h1 class="my-1 text-center" >Tools</h1>
         <div class="row justify-content-center py-3 tools-img">
             <div class="col-md-3 col-lg-2 mx-4 my-3">
