@@ -10,7 +10,7 @@
           <li>
             <a href="https://github.com/karlits-exe" target="_blank">
               <img
-                src="./images/github.png"
+                src="/images/github.png"
                 alt=""
                 width="50"
                 class="img-fluid"
@@ -23,7 +23,7 @@
               target="_blank"
             >
               <img
-                src="./images/LinkedIn_logo.png"
+                src="/images/LinkedIn_logo.png"
                 alt=""
                 width="50"
                 class="img-fluid"
