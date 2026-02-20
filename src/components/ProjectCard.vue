@@ -13,7 +13,6 @@
     </div>
     <div class="card-footer my-3" >
         <a :href="project.link" class="rounded-3" id="project-link" target="_blank">View</a>
-
     </div>
   </div>
 </template>
