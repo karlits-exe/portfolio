@@ -35,7 +35,6 @@ const submitForm = async () => {
         name: name.value,
         email: email.value,
         message: message.value,
-        "g-recaptcha-response": recaptchaToken.value
       }),
     });
 
@@ -77,38 +76,37 @@ function onRecaptchaExpired() {
 
 function renderRecaptcha() {
   if (!window.grecaptcha) {
-    console.error('reCAPTCHA not loaded');
+    console.error("reCAPTCHA not loaded");
     return;
   }
 
   recaptchaWidgetId.value = window.grecaptcha.render(recaptchaContainer.value, {
     sitekey: SITE_KEY,
-    size: 'normal', // or 'compact'
+    size: "normal", // or 'compact'
     callback: onRecaptchaSuccess,
-    'expired-callback': onRecaptchaExpired,
+    "expired-callback": onRecaptchaExpired,
   });
 }
 
 function resetRecaptcha() {
   if (recaptchaWidgetId.value !== null) {
     window.grecaptcha.reset(recaptchaWidgetId.value);
-    recaptchaToken.value = '';
+    recaptchaToken.value = "";
   }
 }
 
-
 onMounted(() => {
   const interval = setInterval(() => {
-    if(window.grecaptcha && window.grecaptcha.render){
+    if (window.grecaptcha && window.grecaptcha.render) {
       renderRecaptcha();
-      clearInterval(interval)
+      clearInterval(interval);
     }
   }, 100);
 
   onBeforeMount(() => {
     clearInterval(interval);
-  })
-})
+  });
+});
 </script>
 
 <template>
@@ -161,7 +159,6 @@ onMounted(() => {
             >
               {{ isLoading ? "Sending..." : "Submit" }}
             </button>
-
 
             <div class="d-flex justify-content-end mt-2">
               <div ref="recaptchaContainer"></div>
