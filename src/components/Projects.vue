@@ -10,7 +10,9 @@
         <div class="row g-3">
           <h1 class="text-center">My Projects</h1>
           <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center" v-for="project in projects" :key="project.id">
-            <ProjectCard :project="project"/>
+            <div v-if="project.isActive"> 
+              <ProjectCard :project="project"/>
+            </div>
           </div>
         </div>
       </div>
